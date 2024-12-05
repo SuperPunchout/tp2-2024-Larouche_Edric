@@ -431,8 +431,8 @@ tbody tr:hover {
 }
 
 .media nav img {
-  width: 150px;
-  height: 150px;
+  width: 8vw;
+  height: 8vw;
   object-fit: cover;
 }
 
@@ -444,8 +444,14 @@ tbody tr:hover {
   display: flex;
   justify-content: center;
   flex-direction: row;
-}
+  color:white;
 
+}
+.media nav ul li a:visited{
+
+  color:red;
+  
+}
 .media a {
   align-items: center;
 
@@ -487,9 +493,10 @@ tbody tr:hover {
   width: 15vw;
   transition: transform 0.8s;
 }
-.galerie section img:hover{
-  transform: rotateX(360deg),rotateY(360deg),rotateZ(360deg);
-  border: 2px solid red;
+.galerie section .imgcont:hover img{
+  transform: rotateX(360deg)
+  rotateY(360deg)
+  rotateZ(360deg);
 
 }
 
