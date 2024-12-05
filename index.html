@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/index.js" defer></script>
+  <title>DJ Gondolf</title>
+</head>
+
+<body>
+  <nav class="navmain">
+    <ul>
+      <li><a href="#introjump">
+          Introduction
+        </a></li>
+      <li><a href="#formsjump">
+          Inscription
+        </a></li>
+      <li><a href="#tablejump">
+          Tableau
+        </a></li>
+      </a></li>
+      <li><a href="#articlejump">
+          Article
+        </a></li>
+      <li><a href="#mediajump">
+          Média
+        </a></li>
+      <li><a href="#galeriejump">
+          Galerie
+        </a></li>
+      <li><a href="#footerjump">
+          Pied de page
+        </a></li>
+    </ul>
+  </nav>
+  <!--Header-->
+  <header id="introjump">
+
+    <!--Titre-->
+    <div class="titre">
+      <h1>Gondolf : Le <span class="highlight">Super</span> DJ !</h1>
+    </div>
+    <!--Nav avec des cartes-->
+    <div class="info">
+      <div class="hand">
+        <div class="card">
+          <div class="front">
+            <p>Informations sur l'auteur:</p>
+          </div>
+          <div class="back">
+            <p>
+              Merci <span class="highlight">Edric Larouche</span> d'avoir
+              construit ce site web pour
+              <span class="highlight">Gondolf</span> le super Magicien! Même
+              si je n'existe pas et que ce travaille est pour le
+              <span class="highlight">TP2</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hand">
+        <div class="card">
+          <div class="front">
+            <p>
+              Techniques d'intégration multimedia, Collège de Maisonneuve,
+              automne 2024
+            </p>
+          </div>
+          <div class="back">
+            <p>582-1W1-Mise en page Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="hand">
+        <div class="card">
+          <div class="front">
+            <p>Le Lien Github</p>
+          </div>
+          <div class="back">
+            <p>TODO:Le lien Github</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!--Main-->
+  <main>
+    <!--Formulaire-->
+    <section class="forms" id="formsjump">
+
+      <h2>Remplissage de formulaire</h2>
+      <form action=" " method="">
+        <div class="input-group">
+          <label for="courriel">Courriel</label>
+          <input type="email" name="courriel" id="courriel" />
+        </div>
+
+        <div class="input-group">
+          <label for="motDePasse" method="post">Mot de passe</label>
+          <input type="password" name="motDePasse" id="motDePasse" required minlength="8" maxlength="200" />
+        </div>
+
+        <div class="input-group">
+          <label for="slider">Niveau de magie dans votre zone</label>
+          <input type="range" name="slider" id="slider" min="0" max="100" />
+        </div>
+
+        <div class="input-group">
+          <label for="frais" class="frais" required>Fournissage de <span class="highlightblue">Fireball</span>:</label>
+          <label><input type="radio" name="frais" value="faux" required /><span class="highlightblue">Oui</span>, je
+            fournit
+            la Fireball a Gondolf.
+          </label>
+          <label><input type="radio" name="frais" value="vrai" /><span class="highlightblue">Non</span>, je ne fournit
+            pas
+            la Fireball a Gondolf. (+1000$ de frais)</label>
+        </div>
+        <div class="btnfin">
+          <div class="input-group">
+            <input type="reset" />
+          </div>
+          <div class="input-group">
+            <input type="submit" />
+          </div>
+        </div>
+    </section>
+    <!-- Tableau -->
+    <!-- 5 lignes 4 colonnes (5x4) -->
+    <section class="table" id="tablejump">
+      <h2>Sorts et leurs effets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom du sort</th>
+            <th>Genre</th>
+            <th>Ambiance</th>
+            <th>Astuce du DJ</th>
+            <th>Effet magique</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Boule de feu Beats</td>
+            <td>EDM</td>
+            <td>Énergique</td>
+            <td>À lancer lors des moments forts</td>
+            <td>Enflamme la piste de danse</td>
+          </tr>
+          <tr>
+            <td>Chaleur Mystique</td>
+            <td>Chillstep</td>
+            <td>Relaxant</td>
+            <td>Idéal pour une transition fluide</td>
+            <td>Crée une aura apaisante</td>
+          </tr>
+          <tr>
+            <td>Bassline Ombre furtive</td>
+            <td>Dubstep</td>
+            <td>Intense</td>
+            <td>Synchronisez avec les jeux de lumière</td>
+            <td>Invoque des vibes sombres</td>
+          </tr>
+          <tr>
+            <td>Groove Tisseur de Lumière</td>
+            <td>Funk</td>
+            <td>Dynamique</td>
+            <td>Parfait pour ouvrir un set</td>
+            <td>Illumine l'esprit du public</td>
+          </tr>
+          <tr>
+            <td>Échos Arcaniques</td>
+            <td>Trance</td>
+            <td>Hypnotique</td>
+            <td>Pour des sets longs et immersifs</td>
+            <td>Captive l’audience</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="5"> Les demandes spéciales sont acceptées.</th>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Article -->
+    <article class="article" id="articlejump">
+
+      <h2>Gondolf et le Mystere du Sortilège " <span class="highlight">Fireball</span> Beats"</h2>
+      <section>
+        <!-- Jai utiliser chatgpt pour generer le texte -->
+        <p>Dans l’univers étincelant de Gondolf, un sortilège domine les soirées : Fireball Beats. Ce morceau-phare,
+          à mi-chemin entre un hymne électro et une incantation magique,
+          incarne l’essence même du style excentrique de Gondolf.
+        </p>
+        <img src="assets/img/GondolfArticle1.webp" alt="GondolfArticle1">
+      </section>
+      <section>
+        <!-- Jai utiliser chatgpt pour generer le texte -->
+        <img src="assets/img/GondolfArticle2.webp" alt="GondolfArticle2">
+        <p>Pour Gondolf, "Fireball Beats" n'est pas qu'une simple chanson : c'est une véritable explosion sonore. Le
+          morceau commence par un grondement discret, semblable au souffle
+          d’une flamme naissante. Puis, peu à peu, les basses montent, comme un feu qui prend de l’ampleur, jusqu’à une
+          montée épique qui se termine par un drop dévastateur.
+        </p>
+
+      </section>
+      <section>
+        <!-- Jai utiliser chatgpt pour generer le texte -->
+        <p>
+          Chaque fois qu’il lance "Fireball Beats", Gondolf interprète un rituel théâtral.
+          Il lève les bras, fait mine de canaliser une énergie invisible, puis frappe violemment le sol avec son baton
+          au moment précis où le drop démarre.
+          La foule réagit immédiatement, criant et dansant comme si elle était sous l’effet d’un véritable sort.
+        </p>
+        <img src="assets/img/GondolfArticle3.webp" alt="GondolfArticle3">
+      </section>
+
+    </article>
+
+    <section class="media" id="mediajump">
+
+      <div>
+        <h2>Médias</h2>
+        <h3>"Je ne sers que du feu absolu."</h2>
+          <h4>-Gondolf
+        </h3>
+
+        <p>Voici une liste des nombreuses musiques que Gondolf a aider a réaliser:</p>
+      </div>
+      <nav>
+        <ul>
+          <li> <a href="https://www.youtube.com/watch?v=eFTLKWw542g" target="_blank">
+              <p>"We Didn't Start the Fire" de Billy Joel</p><img src="assets/img/billy.jpg" alt="Dragonforce">
+            </a></li>
+          <li> <a href="https://www.youtube.com/watch?v=a2giXO6eyuI" target="_blank">
+              <p>"Set Fire to the Rain" d’Adele</p><img src="assets/img/Adele.jpg" alt="Adele">
+            </a></li>
+          <li><a href="https://www.youtube.com/watch?v=DZyYapMZSec" target="_blank">
+              <p>"Through the Fire and Flames" de DragonForce</p><img src="assets/img/dragonforce.jfif"
+                alt="Dragonforce">
+            </a></li>
+        </ul>
+      </nav>
+
+    </section>
+    <article class="galerie" id="galeriejump">
+      <h2>Galerie d'image de l'été 2024</h2>
+      <section>
+        <!-- TODO rajouer des effets interessant sur les images -->
+        <img src="assets/img/galerie/angry gandalf with a fireball like goku in a temple photorealistic.png"
+          alt="gokuGondolf">
+        <img
+          src="assets/img/galerie/depressed gandalf with a bottle of alcohol sitting down holding his head sadly photorealistic.png"
+          alt="sadGondolf">
+        <img src="assets/img/galerie/dj wizard in impressionst art style (1).png" alt="CoolGondolf">
+        <img src="assets/img/galerie/Electric guitar wizard with heavy metal theme.jfif" alt="RockGondolf">
+        <img src="assets/img/galerie/Mad DJ wizard mixing potion with vinyl records.png" alt="DJGondolf">
+        <img src="assets/img/galerie/Wizard playing heavy metal electric guitar (1).png" alt="MetalGondolf">
+      </section>
+    </article>
+  </main>
+
+  <!--Footer-->
+
+  <footer id="footerjump">
+    <div class="parent">
+      <div class="childvide"></div>
+      <div class="child">
+        <ul>
+          <li>
+            <p>
+              Liens importants:
+            </p>
+
+
+          </li>
+          <li>
+            <a href="https://fr.wikipedia.org/wiki/Gandalf" target="_blank">
+              Le site d'un ami
+            </a>
+          </li>
+          <li>
+            <a href="https://fr.wikipedia.org/wiki/Saroumane" target="_blank">
+              Des meilleurs prix que cette fraude!
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      
+      <div class="child">
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=DgNrvnY1mo0" target="_blank"><img src="assets/img/icon/ytb3.png" alt="ytb2"></a></li> <!--Ytb-->
+          <li><a href="https://www.instagram.com/ganddygram/" target="_blank"><img src="assets/img/icon/ig.webp" alt="insta"></a></li> <!--Instagram-->
+          <li><a href="https://www.facebook.com/bonsplansdegandalf/" target="_blank"><img src="assets/img/icon/fb2.png" alt="fb2"></a></li> <!--facebook-->
+          
+        </ul>
+        <p>Avis de confidentialité | Privacy Notice</p>
+      </div>
+      <div class="child" class="maison">
+        <a href="https://www.cmaisonneuve.qc.ca/" target="_blank" >Collège de Maisonneuve 3800 Rue Sherbrooke Est</a>
+ <p>Je suis au TIM (Technique d'Intégration Multimédia) au Cégep de Maisonneuve et c'est le fun. Ont fait des sites web, des jeux, des dessins et des films.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

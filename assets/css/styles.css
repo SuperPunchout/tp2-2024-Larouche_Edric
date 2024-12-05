@@ -1,0 +1,552 @@
+@import url("./reset.css");
+
+/*font gothic pixeliser*/
+@font-face {
+  font-family: GothicPixelFont;
+  src: url(../font/heinzheinrich-font/HeinzheinrichRegular-00L4.otf);
+}
+
+/* font fraktur  */
+@font-face {
+  font-family: FrakturFont;
+  src: url(../font/fin_fraktur/fine_fraktur_B.ttf);
+}
+/*font ringbearer*/
+@font-face{
+  font-family: RingFont;
+  src: url(../font/ringbearer/RINGM___.TTF);
+}
+/* font gothic headings */
+@font-face {
+  font-family: GothicFont;
+  src: url(../font/old_london/OldLondon.ttf);
+}
+
+/*font forms*/
+@font-face {
+  font-family: BlackswordFont;
+  src: url(../font/blacksword/Blacksword.otf);
+}
+
+:root {
+  --txt-md: 1.3rem;
+  --txt-mlg: 1.6rem;
+  --txt-lg: 2rem;
+  --txt-xlg: 4rem;
+  --txt-xxlg: 6rem;
+}
+
+/*body,html{
+  width: 100wv;
+  height: 100vh;
+}*/
+
+/*
+!!!!!!!!!!!!!!!!!!!//////////// Pourquoi ca marche pas?!?!?!?! Fill mal la page ?? peut agrandir
+*/
+
+body {
+  background-color: grey;
+  scroll-behavior: smooth;
+  scroll-padding-top: 15px;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!//////////// nav sticky sur toute la page ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*/
+
+
+body .navmain {
+  position: fixed;
+  top: 0;
+  left:0;
+  right:0;
+  z-index: 1000;
+}
+
+body .navmain ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+width: 100%;
+padding: 0 20px;
+}
+
+body .navmain ul li {
+  background-image: url(../img/sign3.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  opacity: 0.25;
+flex-basis: 20%;
+aspect-ratio: 33/20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: GothicPixelFont;
+}
+
+body .navmain ul li:hover {
+
+  opacity: 1;
+
+
+}
+body .navmain ul li:active {
+
+  border:2px solid red;
+  border-radius: 100%;
+
+
+
+}
+
+/*a{
+scroll-margin-top:15px;
+
+}*/
+a:hover {
+  cursor: grab;
+}
+
+/*nav ul li a{
+  
+}
+*/
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.titre {
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/form.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  height: 70vh;
+}
+
+.titre h1 {
+  font-family: GothicFont;
+  font-size: 6rem;
+
+
+
+}
+
+/**
+*j'aimerais remercier https://www.w3schools.com/howto/howto_css_flip_card.asp de m'avoir aider a faire ma pseudo nav
+*/
+.info {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.hand {
+  background-color: transparent;
+
+  flex-basis: 33.33333333333333%;
+  height: 300px;
+  /* border: 1px solid #f1f1f1;*/
+  /* perspective: 1000px; */
+  font-family: RingFont;
+}
+
+/* This container is needed to position the front and back side */
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  font-size: 1.3rem;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.hand:hover .card {
+  transform: rotateX(180deg);
+}
+
+/* Position the front and back side */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.front {
+  /* background-color: gainsboro; */
+  background-image: linear-gradient(to right,
+      rgb(219, 219, 219),
+      rgb(156, 156, 156),
+      rgb(219, 219, 219));
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the back side */
+.back {
+  background-image: linear-gradient(to right,
+      rgb(156, 156, 156),
+      rgb(219, 219, 219),
+      rgb(156, 156, 156));
+  color: black;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+
+///////////////////////////////////////////////////Forms
+
+*/
+
+.forms {
+  background-image: url(../img/form.jpg);
+
+  width: 100%;
+  height: 100vh;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  font-family: BlackswordFont;
+  font-size: var(--txt-lg);
+  accent-color: royalblue;
+}
+
+.forms h2 {
+  padding-top: 10vh;
+  font-size: var(--txt-xlg);
+  font-family: GothicFont;
+}
+
+.highlight {
+  color: crimson;
+
+}
+
+.highlightblue {
+  color: royalblue;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+form input:invalid {
+  color: brown;
+  border: 2px solid brown;
+}
+
+form input:valid {
+  color: green;
+  border: 2px solid green;
+}
+
+
+/*
+
+///////////////////////////////////////////////////TABLE
+
+*/
+
+.table {
+  width: 100%;
+  height: 100vh;
+  padding-top: 15vh;
+  background-image: url(../img/dungeon.jpg);
+  font-family: RingFont;
+  font-size: var(--txt-md);
+
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+
+}
+.table h2{
+  font-family: GothicFont;
+
+  color: white;
+  text-align: center;
+  font-size: var(--txt-xxlg);
+}
+
+table {
+  margin: 0 auto;
+  min-width: 50%;
+  padding-top: 5vh;
+}
+
+table thead {
+  /* padding-top: 5vh; */
+  background-color: white;
+}
+
+table tfoot {
+  background-color: white;
+}
+
+table thead tr th {
+  text-align: start;
+}
+
+table tbody td {
+  padding: 2vh;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: crimson;
+
+}
+
+tbody tr:nth-child(even) {
+  background-color: royalblue;
+
+}
+
+tbody tr:hover {
+  background-color: white;
+}
+
+/*
+
+///////////////////////////////////////////////////ARTICLE
+
+*/
+
+.article {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 15vh;
+
+  font-family: RingFont;
+  font-size: var(--txt-md);
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(212, 212, 212);
+}
+
+.article section {
+  height: 25vh;
+  padding-top: 2vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: row;
+
+
+
+
+}
+
+.article section img {
+
+  flex-basis: 33%;
+  object-fit: cover;
+
+}
+
+.article section p {
+
+  flex-basis: 66%;
+  align-self: center;
+}
+
+.article h2 {
+  margin: 0 auto;
+  font-family: GothicFont;
+  font-size: var(--txt-xlg);
+}
+
+/*
+
+///////////////////////////////////////////////////Media
+
+*/
+
+.media {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 5vh;
+
+}
+
+.media div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.media section {
+  margin: 0 auto;
+  /* border: 2px solid red;  */
+  width: 60vw;
+}
+
+.media h2 {
+  font-size: var(--txt-xxlg);
+  font-family: GothicFont;
+}
+
+.media h3 {
+  font-size: var(--txt-lg);
+  font-family: BlackswordFont;
+
+  text-shadow: 2px 2px 2px white;
+}
+
+.media h4 {
+  font-size: var(--txt-mlg);
+  font-family: BlackswordFont;
+}
+
+.media p {
+  padding-top: 2vh;
+  font-size: var(--txt-md);
+  font-family: RingFont;
+}
+
+.media nav img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.media nav li {
+  padding-top: 1vh;
+}
+
+.media nav ul li a {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.media a {
+  align-items: center;
+
+}
+
+
+/*
+
+///////////////////////////////////////////////////Galerie
+
+*/
+
+.galerie {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 15vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galerie h2 {
+  color: aliceblue;
+  font-size: var(--txt-xlg);
+  font-family: GothicFont;
+
+}
+
+.galerie section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50vw;
+}
+
+.galerie section img {
+  width: 15vw;
+  transition: transform 0.8s;
+}
+.galerie section img:hover{
+  transform: rotateX(360deg),rotateY(360deg),rotateZ(360deg);
+  border: 2px solid red;
+
+}
+
+
+/*
+
+///////////////////////////////////////////////////Footer
+
+*/
+
+
+footer {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/gandalf_footer2.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+}
+
+.parent{
+  
+  width: 50vw;
+  height: 75vh;
+  display: flex;
+  justify-content: flex-end;
+flex-wrap:wrap;  
+flex-direction: row;
+}
+.child{
+
+
+  background-image: url(../img/scrollfooter.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  aspect-ratio: 33/20;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+.childvide{
+  aspect-ratio: 33/20;
+  flex-basis: 50%;
+}
+
+.child img{
+  width: 5vw;
+  height: auto;
+  
+}
+footer .maison{
+  display: flex;
+  flex-direction: column;
+}
